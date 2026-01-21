@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("high-contrast");
     const iconContrast = document.getElementById("iconContrast");
     if (iconContrast) {
-      iconContrast.classList.remove("moon");
-      iconContrast.classList.add("sun");
+      iconContrast.classList.remove("fa-moon");
+      iconContrast.classList.add("fa-sun");
       updateContrastIcon();
     }
   } else {
@@ -101,11 +101,11 @@ function contrast() {
   const isHighContrast = body.classList.toggle("high-contrast");
   const iconContrast = document.getElementById("iconContrast");
   if (isHighContrast) {
-    iconContrast.classList.remove("moon");
-    iconContrast.classList.add("sun");
+    iconContrast.classList.remove("fa-moon");
+    iconContrast.classList.add("fa-sun");
   } else {
-    iconContrast.classList.remove("sun");
-    iconContrast.classList.add("moon");
+    iconContrast.classList.remove("fa-sun");
+    iconContrast.classList.add("fa-moon");
   }
   updateContrastIcon();
   document.cookie = `highContrast=${isHighContrast}; path=/; max-age=31536000`;

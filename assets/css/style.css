@@ -5,6 +5,7 @@
   font-family: MedievalSharp;
   src: url(../fonts/MedievalSharp/MedievalSharp.ttf);
 }
+
 @font-face {
   font-family: "Sour Gummy";
   src: url(../fonts/Sour_Gummy/SourGummy.ttf);
@@ -20,11 +21,9 @@
   --cor-quinária: #0f7;
   --cor-fundo: #fff;
   --cor-fundo-semitransparente: #ffffff57;
-  --cor-gradiente: linear-gradient(
-    90deg,
-    var(--cor-quaternária) 0%,
-    var(--cor-quinária) 100%
-  );
+  --cor-gradiente: linear-gradient(90deg,
+      var(--cor-quaternária) 0%,
+      var(--cor-quinária) 100%);
   --cor-footer: #222f3e;
   --cor-texto: #333;
   --cor-texto-claro: #bbb;
@@ -69,15 +68,19 @@ h5,
 h6 {
   font-family: var(--fonte-título);
 }
+
 h1 {
   font-size: 2.5em;
 }
+
 h2 {
   font-size: 2em;
 }
+
 h3 {
   font-size: 1.5em;
 }
+
 h4,
 h5,
 h6 {
@@ -100,6 +103,28 @@ p {
 
 .icon {
   margin: 0 1rem;
+  color: var(--cor-texto);
+}
+
+.icon:hover {
+  color: var(--cor-contraste-link);
+}
+
+.icon svg {
+  width: 2em;
+  height: 2em;
+  display: block;
+}
+
+.icon svg path,
+.icon svg circle,
+.icon svg rect,
+.icon svg line,
+.icon svg polygon,
+.icon svg ellipse {
+  fill: currentColor;
+  stroke: currentColor;
+  transition: var(--transition);
 }
 
 .active {
@@ -111,24 +136,39 @@ p {
   background-color: var(--cor-contraste-fundo);
   color: var(--cor-contraste-texto);
 }
+
 .high-contrast header {
   background: var(--cor-contraste-gradiente);
 }
+
 .high-contrast a {
   color: var(--cor-contraste-link);
 }
+
 .high-contrast a:hover {
   color: var(--cor-contraste-link-hover);
 }
+
+.high-contrast .icon {
+  color: var(--cor-contraste-texto);
+}
+
+.high-contrast .icon:hover {
+  color: var(--cor-contraste-link);
+}
+
 .high-contrast .card {
   box-shadow: var(--sombra-contraste);
 }
+
 .high-contrast .card-alternado {
   border-left: 5px solid var(--cor-contraste-borda);
 }
+
 .high-contrast main section {
   background: var(--cor-contraste-fundo);
 }
+
 .high-contrast main section:nth-child(odd) {
   background: var(--cor-contraste-fundo-secundario);
 }
@@ -169,6 +209,7 @@ nav[aria-label="Botões"] {
   align-items: center;
   padding: 25px;
 }
+
 nav[aria-label="Botões"] button {
   border: none;
   border-radius: 10px;
@@ -176,6 +217,7 @@ nav[aria-label="Botões"] button {
   background-color: transparent;
   cursor: pointer;
 }
+
 nav[aria-label="Botões"] button:hover {
   border: var(--borda);
   box-shadow: var(--sombra);
@@ -407,6 +449,7 @@ footer {
 }
 
 @media (min-width: 990px) {
+
   /* * Cabeçalho */
   header {
     flex-flow: row wrap;
