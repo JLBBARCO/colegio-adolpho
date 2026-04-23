@@ -116,6 +116,16 @@ p {
   display: block;
 }
 
+.icon.fa-2x svg {
+  width: 2em;
+  height: 2em;
+}
+
+.icon.fa-3x svg {
+  width: 3em;
+  height: 3em;
+}
+
 .icon svg path,
 .icon svg circle,
 .icon svg rect,

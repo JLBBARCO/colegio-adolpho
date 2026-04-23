@@ -100,12 +100,14 @@ function contrast() {
   const body = document.body;
   const isHighContrast = body.classList.toggle("high-contrast");
   const iconContrast = document.getElementById("iconContrast");
-  if (isHighContrast) {
-    iconContrast.classList.remove("fa-moon");
-    iconContrast.classList.add("fa-sun");
-  } else {
-    iconContrast.classList.remove("fa-sun");
-    iconContrast.classList.add("fa-moon");
+  if (iconContrast) {
+    if (isHighContrast) {
+      iconContrast.classList.remove("fa-moon");
+      iconContrast.classList.add("fa-sun");
+    } else {
+      iconContrast.classList.remove("fa-sun");
+      iconContrast.classList.add("fa-moon");
+    }
   }
   updateContrastIcon();
   document.cookie = `highContrast=${isHighContrast}; path=/; max-age=31536000`;
